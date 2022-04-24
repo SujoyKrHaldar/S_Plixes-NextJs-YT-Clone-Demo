@@ -46,12 +46,16 @@ p {
   // font-family: "Libre Bodoni", serif;
 }
 
+.icon {
+  display: flex;
+  font-size: 3rem;
+}
+
 /***************************
 ----------Navbar------------
 ***************************/
 
 .navbar {
-  max-width: 1280px;
   position: absolute;
   width: 100%;
   height: min-content;
@@ -65,18 +69,38 @@ p {
   padding: 1rem 2rem;
   z-index: 10;
 
-  p {
-    cursor: pointer;
-    transition: 0.5s ease-in-out;
-    &:hover {
-      color: red;
-    }
-  }
-
   .logo {
     font-family: "Caveat", cursive;
     font-size: 2rem;
     color: red;
+  }
+  .icon {
+    font-size: 1.5rem;
+    opacity: 0.5;
+    transition: 0.5s ease;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .navbar_icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .avatar {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 0.5rem;
+
+    .icon {
+      opacity: 1;
+    }
   }
 }
 
@@ -85,7 +109,6 @@ p {
 ***************************/
 
 .footer {
-  max-width: 1280px;
   position: absolute;
   width: 100%;
   height: min-content;
@@ -94,10 +117,18 @@ p {
   bottom: 0;
   display: flex;
   align-items: center;
-  justify-content: right;
-  color: white;
+  justify-content: space-between;
+  color: rgb(175, 175, 175);
   padding: 2rem;
   z-index: 10;
+
+  p.link {
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    &:hover {
+      color: white;
+    }
+  }
 }
 
 /***************************
@@ -295,6 +326,17 @@ p {
         // font-family: "IM Fell Great Primer", serif;
         font-family: "Libre Bodoni", serif;
         color: darkgrey;
+      }
+
+      .button {
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .play_button {
+          color: red;
+        }
       }
     }
   }

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { AiFillPlayCircle } from "react-icons/ai";
+import { BsBookmark } from "react-icons/bs";
 
 function Banner() {
   const [isLoading, setLoading] = useState(true);
@@ -31,8 +32,13 @@ function Banner() {
               new-found ally, Diana Prince, to face an even greater enemy.
             </p>
             <div className="button">
-              <div className="play_button">
+              <div className="icon play_button">
                 <AiFillPlayCircle />
+              </div>
+              <div className="other_btn">
+                <div className="icon bookmark">
+                  <BsBookmark />
+                </div>
               </div>
             </div>
           </div>
