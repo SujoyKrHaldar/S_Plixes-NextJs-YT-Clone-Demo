@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { getData } from "../../../api/getVideoData";
 import Main from "../../components/browse/Main";
+import Banner from "../../components/designs/cards/Banner";
 import Layout from "../../components/layout/Layout";
 
 export const getServerSideProps = async () => {
@@ -22,6 +23,7 @@ function index({ data }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
+        <Banner />
         <Main data={data} />
       </Layout>
     </>

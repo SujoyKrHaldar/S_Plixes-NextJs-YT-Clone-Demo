@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Bodoni&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
 html,
 body {
@@ -41,18 +43,9 @@ h2 {
 
 p {
   font-size: 1rem;
-  font-family: "Source Sans Pro", sans-serif;
+  // font-family: "Libre Bodoni", serif;
 }
 
-::-webkit-scrollbar {
-  width: 10px;
-  background-color: rgba(0, 0, 0, 0);
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #ff0000;
-  border-radius: 10px;
-}
 /***************************
 ----------Navbar------------
 ***************************/
@@ -175,7 +168,7 @@ p {
       p {
         font-size: 1.3rem;
         color: red;
-        font-family: "IM Fell Great Primer", serif;
+        // font-family: "IM Fell Great Primer", serif;
       }
 
       .bottom {
@@ -256,24 +249,114 @@ p {
 
 /***************All lists***************/
 
+.banner {
+  height: 663px;
+  overflow: hidden;
+  padding: 2rem;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(1deg, #131313, transparent, transparent);
+  }
+
+  .banner_content {
+    max-width: 1280px;
+    height: 100%;
+    margin: auto;
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    justify-content: left;
+    z-index: 1;
+
+    .content {
+      flex: 1;
+      max-width: 720px;
+      padding: 0 2rem;
+
+      h1 {
+        line-height: 3rem;
+        margin: 1rem 0px;
+        font-family: "Bebas Neue", cursive;
+      }
+
+      p:first-child {
+        font-size: 0.9rem;
+      }
+
+      p {
+        font-size: 1.3rem;
+        line-height: 2rem;
+        // font-family: "IM Fell Great Primer", serif;
+        font-family: "Libre Bodoni", serif;
+        color: darkgrey;
+      }
+    }
+  }
+
+  .cover_background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(19, 19, 19);
+    inset: 0;
+
+    .background_image {
+      opacity: 0.4;
+      transition: 3s ease-in-out;
+    }
+
+    .img_loading {
+      transform: scale(1.05);
+      filter: grayscale(1) blur(7px);
+    }
+
+    .img_load_stop {
+      transform: scale(1);
+      filter: grayscale(0) blur(0px);
+    }
+  }
+}
+
+/********************************
+---------List template-----------
+*********************************/
 .main {
-  max-width: 1280px;
+  background-color: #131313;
   height: 100%;
-  margin: 2rem auto;
   padding: 2rem;
   text-align: left;
 }
 
-.list_fav {
+.list_template {
+  padding: 2rem;
+  max-width: 1280px;
+  margin: 3rem auto;
+
   h2 {
     text-align: left;
     margin-bottom: 1rem;
+    color: white;
   }
   .list {
     display: flex;
     justify-content: left;
     gap: 1rem;
     overflow-x: scroll;
+
+    &::-webkit-scrollbar {
+      height: 5px;
+      background-color: rgba(0, 0, 0, 0);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #ff0000;
+    }
   }
 }
 

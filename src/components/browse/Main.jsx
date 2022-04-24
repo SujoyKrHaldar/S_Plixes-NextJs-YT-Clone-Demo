@@ -1,10 +1,15 @@
-import List_Fav from "./components/List_Fav";
+import Card_Med from "../designs/cards/Card_Med";
+import Lists from "./components/Lists";
 
 function Main({ data }) {
   return (
     <>
       <div className="main">
-        <List_Fav data={data} />
+        <Lists title="All about Marvel">
+          {data.map((item, index) => (
+            <Card_Med data={item} key={index} />
+          ))}
+        </Lists>
       </div>
     </>
   );
