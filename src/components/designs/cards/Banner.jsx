@@ -28,7 +28,7 @@ function Banner() {
             <h1>Justice league</h1>
             <p className="bottom">
               Fueled by his restored faith in humanity and inspired by
-              Superman's selfless act, Bruce Wayne enlists the help of his
+              Superman&apos selfless act, Bruce Wayne enlists the help of his
               new-found ally, Diana Prince, to face an even greater enemy.
             </p>
             <div className="button">

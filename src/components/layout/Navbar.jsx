@@ -23,7 +23,7 @@ function Navbar() {
         </Link>
 
         <div className="navbar_icons">
-          <Link href="/browse">
+          <Link href="/browse" passHref>
             <div className="icon">
               {router.pathname === "/browse" ? (
                 <AiTwotoneHome />
@@ -33,7 +33,7 @@ function Navbar() {
             </div>
           </Link>
 
-          <Link href="/likes">
+          <Link href="/likes" passHref>
             <div className="icon">
               {router.pathname === "/likes" ? (
                 <AiTwotoneLike />
@@ -43,7 +43,7 @@ function Navbar() {
             </div>
           </Link>
 
-          <Link href="/bookmarks">
+          <Link href="/bookmarks" passHref>
             <div className="icon" style={{ fontSize: "1.3rem" }}>
               {router.pathname === "/bookmarks" ? (
                 <BsBookmarksFill />
